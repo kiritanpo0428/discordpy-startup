@@ -87,3 +87,10 @@ client.on('message',message =>{
     }
   }
 });
+client.on("message", message => {
+  if (
+    message.content.startsWith("t.say") &&
+    message.author.id == "714518436578852944"
+  )
+    message.channel.send(message.content.slice(6));
+});
